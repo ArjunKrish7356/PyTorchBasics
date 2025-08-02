@@ -1,3 +1,12 @@
+# Seq2Seq Model with Attention for Language Translation (English-French)
+# - This script builds a sequence-to-sequence neural network using PyTorch for translating sentences.
+# - Architecture: Encoder-Decoder with GRU layers and Bahdanau-style attention.
+# - Encoder: Embedding + GRU (hidden_size=128)
+# - Decoder: Embedding + Attention + GRU + Linear output (hidden_size=128)
+# - Training: Batch size 32, Adam optimizer, NLLLoss, trained for 80 epochs.
+# - Data: Uses custom English-French sentence pairs; supports teacher forcing.
+# - Evaluation: Generates translated output and visualizes training loss.
+
 from __future__ import unicode_literals, print_function, division
 from io import open
 import unicodedata
